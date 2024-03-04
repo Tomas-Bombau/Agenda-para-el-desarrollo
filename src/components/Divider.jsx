@@ -3,13 +3,13 @@ import React from "react";
 import PeopleIcon from '@mui/icons-material/People';
 
 
-const DividerLine = () => {
+const DividerLine = ({label}) => {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="lg" sx={{marginTop:"40px", marginBottom:"40px"}}>
       <Divider component="div" role="presentation">
         <Chip
           icon={<PeopleIcon />}
-          label="Nosotros"
+          label={label}
           variant="contained"
           size='medium'
           color="secondary"

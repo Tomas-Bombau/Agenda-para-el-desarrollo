@@ -3,8 +3,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <Container id="nosotros" component="section" className="my-10" maxWidth="xl">
-        <Typography variant="h1" gutterBottom>Nosotros</Typography>
+    <Container id="nosotros" component="section" className="my-10" maxWidth="lg">
+        <Typography variant="h3" gutterBottom>Cambia todo cambia...</Typography>
           <Stack spacing={4} direction="column">
             <Typography variant="body1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
