@@ -5,6 +5,8 @@ import About from "../components/About";
 import DividerLine from "../components/Divider";
 import Activities from "../components/Activities";
 import Blog from "../components/Blog";
+import News from "../components/News";
+
 
 const Home = () => {
   return (
@@ -16,7 +18,8 @@ const Home = () => {
       <DividerLine label={"Qué hacemos?"}/>
       <Activities />
       <DividerLine label={"Noticias"}/>
-      <Blog />
+      <News />
+      {/* <Blog /> */}
     </main>
   );
 };

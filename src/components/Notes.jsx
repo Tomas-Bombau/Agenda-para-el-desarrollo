@@ -8,20 +8,20 @@ import {
   Typography,
 } from "@mui/material";
 
-const Notes = () => {
+const Notes = ({title, description}) => {
   return (
     <Card>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 250}}
         image="https://infofunes.com.ar/uploads/NuevaCarpeta%201/escuelajpg_web.jpg"
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Las clases no comienzan
+          {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fugiat autem architecto mollitia necessitatibus laudantium quasi temporibus esse similique, beatae asperiores quidem vero fugit nulla repellat illum veniam. Quasi, voluptate.
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
