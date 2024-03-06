@@ -6,7 +6,7 @@ const Activity = ({image, title, info}) => {
   return (
     <Box
       height={200}
-      borderRadius={5}
+      borderRadius={0}
       sx={{
         position: "relative",
         backgroundImage:
@@ -22,7 +22,6 @@ const Activity = ({image, title, info}) => {
           right: 0,
           bottom: 0,
           backgroundColor: "rgba(128, 0, 128, 0.5)", // Cambia el color y la opacidad según tu preferencia
-          borderRadius: "20px",
         },
       }}
     >

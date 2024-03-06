@@ -8,9 +8,12 @@ import {
   ListItemText,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import React from "react";
+import { useTheme } from "@emotion/react";
+
 
 const About = () => {
   const metas = [
@@ -20,24 +23,31 @@ const About = () => {
     "Creemos en un mundo donde laigualdad, la educación y la justicia sean accesibles para todos.",
   ];
 
+  const theme = useTheme();
+  const smScreen = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
-    <Container
-      id="nosotros"
-      component="section"
-      className="my-10"
-    >
-      <Typography variant="h3" gutterBottom>
-        ¿Quién eres si no luchas por lo que crees?
-      </Typography>
-      <Typography variant="body1">
-        Nosotros somos más que individuos; somos un grupo de personas unidas por
-        la convicción de que la transformación positiva es posible.
-        Quienes somos se define por la pasión que compartimos y la creencia
-        inquebrantable en el potencial transformador de las personas.
-      </Typography>
+    <Container id="nosotros" component="section" className="my-10">
       <Stack spacing={4} direction="column">
-        <Grid container >
-          <Grid item xs={8}>
+        <Grid container>
+          <Grid item md={6} sx={{display: "flex", justifyContent: "center", alignItems: "start"}}>
+            <Box sx={{ width: smScreen ? "100%" : "60%", height: smScreen ? "100%": 400, position: "relative", display:"flex", alignItems:"center"}}>
+              <Box sx={{ position: "relative", zIndex: "2"}}>
+                <Typography className="font-extrabold font" variant="h3" align={"center"} gutterBottom sx={{ paddingTop: "10px", paddingLeft: "10px"}}>
+                  "Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo"
+                </Typography>
+                <Typography variant="body2" align={smScreen ? "center" : "left"} gutterBottom>
+                  Tomas Bombau, presidente Agenda para el Desarrollo
+                </Typography>
+              </Box>
+              <Box sx={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", zIndex: "1"}}>
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: "absolute", width: "100%", height: "100%"}}>
+                  <polygon points="30,0 100,0 70,100 0,100" fill="#9b8f00"/>
+                </svg>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item md={6}>
             <List>
               {metas.map((meta) => (
                 <ListItem>
@@ -49,43 +59,7 @@ const About = () => {
               ))}
             </List>
           </Grid>
-          <Grid item xs={4}>
-            <Box
-              width="100%"
-              height="100%"
-              sx={{
-                borderRadius: "8%",
-                boxShadow: "10px 10px 20px black",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG9nZXRoZXJ8ZW58MHwxfDB8fHwy)",
-                // position: "relative", 
-                // overflow: "hidden", 
-                // "&:hover:before": {
-                //   content: "''",
-                //   position: "absolute",
-                //   top: 0,
-                //   left: 0,
-                //   width: "100%",
-                //   height: "100%",
-                //   backgroundColor: "white", // Setting white background
-                // },
-                // transition: "transform 0.5s ease-in-out", // Adding transition property
-                // "&:hover": {
-                //   "&::before": {
-                //     transform: "rotateY(0deg)", // Show the white background during flip
-                //   },
-                //   transform: "rotateY(180deg)", // Flip the card horizontally
-                // },
-            }}
-            />
-          </Grid>
         </Grid>
-        <Typography variant="body1">
-          Somos Agenda para el Desarrollo, una Asociación Civil comprometida con la construcción de un futuro más equitativo para todos
-          
-        </Typography>
       </Stack>
     </Container>
   );
