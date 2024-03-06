@@ -27,7 +27,7 @@ const Activity = ({image, title, info}) => {
       }}
     >
       <Typography
-        color="white"
+        color={title == "ARTE" || title == "SALUD Y DEPORTES" ? "black" : "white"}
         variant="h3"
         sx={{
           position: "absolute",
