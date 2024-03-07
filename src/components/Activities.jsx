@@ -1,10 +1,13 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Activity from "./Activity";
 
 const Activities = () => {
   return (
     <Container maxWidth="lg" sx={{ marginTop: "20px" }}>
+      <Typography gutterBottom variant="h3" fontFamily="Chilanka" sx={{textDecoration: "underline #3A7B50" ,textDecorationThickness: "4px", textUnderlineOffset: "5px"}}>
+          QUÉ HACEMOS 
+        </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Activity

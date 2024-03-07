@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-// import { Button } from './button';
 import { CiMenuBurger } from "react-icons/ci";
-import { ButtonGroup, Button } from '@mui/material';
+import { ButtonGroup, Button, Container, Typography } from '@mui/material';
 
 
 export default function Preview() {
@@ -25,11 +24,20 @@ export default function Preview() {
 
   const [hamburger, setHamburger] = useState(false)
 
+  const gradientStyle = {
+    fontSize: '25px',
+    background: 'linear-gradient(90deg, rgba(254,231,138,1) 0%, rgba(255,121,97,1) 53%, rgba(58,123,80,1) 99%)',
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent',
+  };
+
   return (
-      <nav className="z-10 bg-white py-5 flex flex-col size-full sm:flex-row sm:items-center sm:justify-between 2xl:px-12">
+    <Container maxWidth="2xl" sx={{backgroundImage: "url(https://imageio.forbes.com/specials-images/imageserve/5ffa4ea25f3704b760abea7b/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds)", height:"500px", backgroundSize: "cover",
+    }}>
+      <nav className="z-10 bg-transparent py-5 flex flex-col size-full sm:flex-row sm:items-center sm:justify-between 2xl:px-12 h-20">
         <div className='flex justify-between gap-5 items-center '>
           <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 sm:hidden">
-            <Button color='secondary' onClick={() => setHamburger(!hamburger)} variant="text" size="large" iconOnly aria-label="Menu">
+            <Button onClick={() => setHamburger(!hamburger)} variant="text" size="large" iconOnly aria-label="Menu">
               <CiMenuBurger  className="stroke-inherit h-8 w-8" />
             </Button>
           </div>
@@ -37,27 +45,28 @@ export default function Preview() {
             <div class>
               <img className="h-10 w-10" src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" />
             </div>
-            <h1 className="text-xl sm:hidden md:flex">Agenda para el Desarrollo</h1>
+            <Typography variant='headerLogo' fontWeight={600} style={gradientStyle}>Agenda para el Desarrollo</Typography>
           </div>
         </div>
         <div>
         </div>
         <div className={hamburger ? "z-10 flex-col" : "hidden sm:flex sm:flex-row"}>
-          <ButtonGroup variant='text' color="secondary" aria-label='alignment button group' className={hamburger ? "absolute z-2 w-fit rounded z-2 mt-2 flex items-start" : "flex flex-row mt-0 bg-hidden gap-2"}>
-            <Button href="#nosotros">
-              Nosotros
+          <ButtonGroup  aria-label='alignment button group' className={hamburger ? "absolute z-2 w-fit rounded z-2 mt-2 flex items-start color" : "flex flex-row mt-0 bg-hidden gap-2"}>
+            <Button href="#nosotros"  sx={{ color: 'white', border: "none", "&:hover":{textDecoration: "underline wavy",textDecorationThickness: "2px", textUnderlineOffset: "4px", transform:"scale(1.02)", border: "none"}}}>
+              <Typography fontWeight={400}>Nosotros</Typography>
             </Button>
-            <Button href="/about">
-              Qué hacemos?
+           <Button href="#nosotros" sx={{ color: 'white', border: "none", "&:hover":{textDecoration: "underline wavy",textDecorationThickness: "2px", textUnderlineOffset: "4px", transform:"scale(1.02)", border: "none"}}}>
+           <Typography fontWeight={400}>Qué hacemos?</Typography>
             </Button>
-            <Button href="/pricing">
-              Ser voluntario
+            <Button href="#nosotros" sx={{ color: 'white', border: "none", "&:hover":{textDecoration: "underline wavy",textDecorationThickness: "2px", textUnderlineOffset: "4px", transform:"scale(1.02)", border: "none"}}}>
+            <Typography fontWeight={400}>Voluntariado</Typography>
             </Button>
-            <Button href="/contact">
-              Donar
+           <Button href="#nosotros" sx={{ color: 'white', border: "none", "&:hover":{textDecoration: "underline wavy",textDecorationThickness: "2px", textUnderlineOffset: "4px", transform:"scale(1.02)", border: "none"}}}>
+           <Typography fontWeight={400}>Donar</Typography>
             </Button>
           </ButtonGroup>
         </div>
       </nav>
+    </Container>
   );
 };

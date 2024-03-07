@@ -32,11 +32,41 @@ const theme = createTheme({
     body1: {
       fontSize: "18px",
     },
+    headerLogo:{
+      fontSize: "25px",
+    },
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+      "Chilanka",
+      "cursive",
+      "Raleway", "sans-serif"
+    ].join(","),
+    primary: [
+      "Raleway", "sans-serif"
+    ].join(","),
   },
   palette: {
-    neutral: {
-      main: colors.deepOrange[500]
-    }
+    yellow: {
+      main: "#FEE78A",
+    },
+    orange: {
+      main: "#ff7961",
+    },
+    green: {
+      main: "#3A7B50",
+    },
+    red: {
+      main: "#E15244",
+    },
   },
 });
 
