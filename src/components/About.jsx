@@ -7,7 +7,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Slide,
   Stack,
   Typography,
   useMediaQuery,
@@ -16,6 +15,7 @@ import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import VerifiedIcon from "@mui/icons-material/Verified";
 import React from "react";
 import { useTheme } from "@emotion/react";
+import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -46,9 +46,11 @@ const About = () => {
                   <Typography variant="underline" textAlign={smScreen ? "center" : "start"} gutterBottom>
                     Tomas Bombau, presidente Agenda para el Desarrollo
                   </Typography>
+                  <Link to="nosotros">
                   <Button variant="contained" fontWeight={500} color="red" endIcon={<ReadMoreIcon />} >
                     Conocé a todo el equipo
                   </Button>
+                  </Link>
                 </Stack>
               <Box sx={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%", zIndex: "1"}}>
                 <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: "absolute", width: "100%", height: "100%"}}>
@@ -59,8 +61,8 @@ const About = () => {
           </Grid>
           <Grid item md={6}>
             <List>
-              {metas.map((meta) => (
-                <ListItem>
+              {metas.map((meta, index) => (
+                <ListItem key={index}>
                   <ListItemIcon>
                     <VerifiedIcon color="green" />
                   </ListItemIcon>

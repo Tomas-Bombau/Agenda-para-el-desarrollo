@@ -1,8 +1,12 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography, useTheme, useMediaQuery } from "@mui/material";
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 import React from "react";
 
 const Activity = ({image, title, info}) => {
+
+  const theme = useTheme()
+  const mdScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Box
       height={200}
@@ -25,35 +29,32 @@ const Activity = ({image, title, info}) => {
         },
       }}
     >
-      <Typography
-        color={title == "ARTE" || title == "SALUD Y DEPORTES" ? "black" : "white"}
-        variant="h3"
-        sx={{
-          position: "absolute",
-          bottom: 20,
-          left: 50,
-          fontWeight: "bold"
-        }}
-      >
-        {title}
-      </Typography>
-      <Button
-        variant="contained"
-        color="red"
-        size="small"
-        endIcon={<PlayCircleOutlinedIcon />}
-        sx={{
-          position: "absolute",
-          bottom: 20,
-          right: 50,
-          cursor: "pointer",
-          "&:hover":{
-              transform: "scale(1.02)"
-          }
-        }}
-      >
-        {info}
-      </Button>
+      <Stack flex flexDirection={mdScreen ? "col" : "row"} justifyContent={mdScreen ? "end" : "space-between"} alignItems={mdScreen ? "justify-start" : "end"} height={200} marginX={mdScreen ? 1 : 2}>
+        <Typography
+          marginBottom={2}
+          color={title == "CULTURA" || title == "SALUD Y DEPORTES" ? "black" : "white"}
+          variant="h3"
+          sx={{
+            fontWeight: "bold"
+          }}
+        >
+          {title}
+        </Typography>
+        <Button
+          variant="contained"
+          color="red"
+          size="small"
+          endIcon={<PlayCircleOutlinedIcon sx={{color: "white"}}/>}
+          sx={{
+            marginBottom:"20px",
+            "&:hover":{
+                transform: "scale(1.02)"
+            }
+          }}
+        >
+          <Typography fontWeight={400} color="white">{info} </Typography>
+        </Button>
+      </Stack>
     </Box>
   );
 };

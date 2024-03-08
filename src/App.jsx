@@ -2,9 +2,12 @@ import { Routes, Route } from "react-router-dom";
 
 //Views
 import Home from "./views/Home";
-import Nosotros from "./views/Nosotros";
+import Noticias from "./views/Noticias";
+import Equipo from "./views/Equipo";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { colors } from "@mui/material";
+import Donaciones from "./views/Donaciones";
+import Voluntariado from "./views/Voluntariado";
+
 
 const theme = createTheme({
   typography: {
@@ -75,7 +78,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/noticias" element={<Noticias />} />
+        <Route path="/nosotros" element={<Equipo />} />
+        <Route path="/donaciones" element={<Donaciones />} />
+        <Route path="/voluntariado" element={<Voluntariado />} />
       </Routes>
     </ThemeProvider>
   );
