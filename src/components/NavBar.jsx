@@ -42,11 +42,11 @@ const NavBar = () => {
             paddingX: "8px",
             paddingY: "8x",
             '&:hover': {
-              textDecoration: 'underline wavy',
+              textDecoration: 'underline',
               textDecorationThickness: '2px',
               textUnderlineOffset: '4px',
               transform: 'scale(1.02)',
-              border: 'none'
+              border: '1px solid white'
             }
           }}
         />
@@ -69,20 +69,20 @@ const NavBar = () => {
       </div>
     </div>
     <div className={hamburger && smScreenLg ? "z-10 flex-col items-start justify-start" : "hidden lg:flex lg:flex-row"}>
-      <ButtonGroup  aria-label='alignment button group' className={hamburger && smScreenLg ? "absolute top-[65px] left-2 z-2 rounded z-2 mt-2 flex flex-col items-start gap-1": "flex flex-row mt-0 bg-hidden gap-2"}>
-          <ButtonStyled href="#nosotros" variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
+      <ButtonGroup  aria-label='alignment button group' className={hamburger && smScreenLg ? "absolute top-[65px] left-2 z-2 rounded z-2 mt-2 flex flex-col items-start gap-1": "flex flex-row mt-0 bg-hidden gap-4"}>
+          <ButtonStyled href="#nosotros" variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>Nosotros</Typography>
           </ButtonStyled>
-          <ButtonStyled href="#actividades" variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled href="#actividades" variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>¿Qué hacemos?</Typography>
           </ButtonStyled>
-          <ButtonStyled  variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled  variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Link to="/noticias"><Typography fontWeight={400}>Noticias</Typography></Link>
           </ButtonStyled>
-          <ButtonStyled  variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled  variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Link to="/voluntariado"><Typography fontWeight={400}>Voluntariado</Typography></Link>
           </ButtonStyled>
-          <ButtonStyled variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
              <Link to="/donaciones"><Typography fontWeight={400}>Donar</Typography></Link>
           </ButtonStyled>
       </ButtonGroup>

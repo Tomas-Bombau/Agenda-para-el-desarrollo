@@ -10,8 +10,8 @@ const Home = () => {
     <main className="bg-neutral-50">
       <Header />
       <About />
-      <Activities />
       <ExtraInformation />
+      <Activities />
       {/* <Principles />
       <News /> */}
     </main>

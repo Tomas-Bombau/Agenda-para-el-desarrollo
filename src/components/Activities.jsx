@@ -18,7 +18,7 @@ const Activities = () => {
   },
   {
     image: "https://images.unsplash.com/photo-1663782464052-d4f9a77b24a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "EMPRENDEDURISMO",
+    title: "EMPRENDEDORES",
     info:"Conocé más",
   },
   {

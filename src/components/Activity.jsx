@@ -29,7 +29,7 @@ const Activity = ({image, title, info}) => {
         },
       }}
     >
-      <Stack flex flexDirection={mdScreen ? "col" : "row"} justifyContent={mdScreen ? "end" : "space-between"} alignItems={mdScreen ? "justify-start" : "end"} height={200} marginX={mdScreen ? 1 : 2}>
+      <Stack flex flexDirection={mdScreen ? "col" : "row"} justifyContent={mdScreen ? "end" : "space-between"} alignItems={mdScreen ? "justify-start" : "end"} height={200} marginX={mdScreen ? 1 : 5}>
         <Typography
           marginBottom={2}
           color={title == "CULTURA" || title == "SALUD Y DEPORTES" ? "black" : "white"}
