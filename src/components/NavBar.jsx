@@ -76,9 +76,9 @@ const NavBar = () => {
           <ButtonStyled href="#actividades" variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>¿Qué hacemos?</Typography>
           </ButtonStyled>
-          <ButtonStyled  variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
+          {/* <ButtonStyled  variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Link to="/noticias"><Typography fontWeight={400}>Noticias</Typography></Link>
-          </ButtonStyled>
+          </ButtonStyled> */}
           <ButtonStyled  variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
             <Link to="/voluntariado"><Typography fontWeight={400}>Voluntariado</Typography></Link>
           </ButtonStyled>
