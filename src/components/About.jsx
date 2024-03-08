@@ -33,7 +33,7 @@ const About = () => {
   return (
     <Container id="nosotros" component="section" className="my-10">
       <Stack spacing={4} direction="column">
-        <Typography variant="h3" fontFamily="Chilanka" sx={{textDecoration: "underline #3A7B50" ,textDecorationThickness: "4px", textUnderlineOffset: "5px", color:"primaryLight"}}>
+        <Typography variant="h3" fontFamily="Chilanka" className="text-center lg:text-left" sx={{textDecoration: "underline #3A7B50" ,textDecorationThickness: "4px", textUnderlineOffset: "5px", color:"primaryLight"}}>
           NOSOTROS 
         </Typography>
         <Grid container>
@@ -43,7 +43,7 @@ const About = () => {
                   <Typography textAlign={smScreen ? "center" : "start"} fontFamily="Raleway" fontWeight={700} variant="h3" gutterBottom>
                     "Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo"
                   </Typography>
-                  <Typography variant="underline" gutterBottom>
+                  <Typography variant="underline" textAlign={smScreen ? "center" : "start"} gutterBottom>
                     Tomas Bombau, presidente Agenda para el Desarrollo
                   </Typography>
                   <Button variant="contained" fontWeight={500} color="red" endIcon={<ReadMoreIcon />} >

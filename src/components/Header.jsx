@@ -43,9 +43,9 @@ export default function Preview() {
               <CiMenuBurger className="stroke-inherit text-white h-10 w-10" />
             </Button>
           </div>
-          <div className='flex justify-end flex-row-reverse items-center gap-5'>
+          <div className='flex justify-end flex-row-reverse items-center gap-5 lg:flex-row'>
             <div className>
-              <img className="h-10 w-10" src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" />
+              <img className="h-10 w-10 hidden sm:flex" src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" />
             </div>
             <Typography variant='headerLogo' fontWeight={600} style={gradientStyle}>Agenda para el Desarrollo</Typography>
           </div>
