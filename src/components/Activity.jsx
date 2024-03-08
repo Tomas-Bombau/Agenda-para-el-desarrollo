@@ -21,7 +21,7 @@ const Activity = ({image, title, info}) => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "rgba(128, 0, 128, 0.5)", // Cambia el color y la opacidad según tu preferencia
+          backgroundColor: "rgba(254,231,138, 0.5)", // Cambia el color y la opacidad según tu preferencia
         },
       }}
     >
@@ -39,7 +39,7 @@ const Activity = ({image, title, info}) => {
       </Typography>
       <Button
         variant="contained"
-        color="primary"
+        color="red"
         size="small"
         endIcon={<PlayCircleOutlinedIcon />}
         sx={{
