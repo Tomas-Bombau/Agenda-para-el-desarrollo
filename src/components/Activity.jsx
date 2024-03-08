@@ -52,7 +52,7 @@ const Activity = ({image, title, info}) => {
             }
           }}
         >
-          <Typography fontWeight={400} color="white">{info} </Typography>
+          <Typography fontFamily="Chilanka" fontWeight={400} color="white" mt={1}>{info} </Typography>
         </Button>
       </Stack>
     </Box>

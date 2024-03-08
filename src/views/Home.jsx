@@ -2,8 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import About from "../components/About";
 import Activities from "../components/Activities";
-import News from "../components/News";
-import Principles from "../components/Principles";
+import ExtraInformation from "../components/ExtraInformation";
 
 
 const Home = () => {
@@ -12,6 +11,7 @@ const Home = () => {
       <Header />
       <About />
       <Activities />
+      <ExtraInformation />
       {/* <Principles />
       <News /> */}
     </main>

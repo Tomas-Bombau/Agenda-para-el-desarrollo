@@ -6,8 +6,6 @@ import Activity from "./Activity";
 
 const Activities = () => {
 
-
-
   const activities = [{
     image: "https://media.puntal.com.ar/p/2c651d36302a93005933f093ff849ee1/adjuntos/270/imagenes/001/514/0001514450/1200x0/smart/educacionjpg.jpg",
     title: "EDUCACION",
@@ -30,7 +28,7 @@ const Activities = () => {
   }]
 
   return (
-    <Container id="actividades" component="section" maxWidth="lg" sx={{ marginTop: "20px" }}>
+    <Container id="actividades" component="section" maxWidth="lg" sx={{ marginTop: "20px" }} >
       <Typography gutterBottom variant="h3" fontFamily="Chilanka" className="text-center lg:text-left" sx={{textDecoration: "underline #3A7B50" ,textDecorationThickness: "4px", textUnderlineOffset: "5px"}}>
           QUÉ HACEMOS 
         </Typography>
