@@ -26,6 +26,7 @@ const Activity = ({image, title, info}) => {
           right: 0,
           bottom: 0,
           backgroundColor: "rgba(254,231,138, 0.5)", // Cambia el color y la opacidad según tu preferencia
+        
         },
       }}
     >

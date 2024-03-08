@@ -11,7 +11,6 @@ const ExtraInformation = () => {
   const theme = useTheme()
   const smScreen = useMediaQuery(theme.breakpoints.down("sm"))
   const mdScreen = useMediaQuery(theme.breakpoints.down("md"))
-  const [textOrImage, setTextOrImage] = useState(0)
 
   return (
     <Container maxWidth="lg" sx={{ marginY: "40px" }} component="section">
