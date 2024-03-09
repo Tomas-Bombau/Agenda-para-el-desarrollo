@@ -22,7 +22,7 @@ export default function SwipperPhotosMain() {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper h-[280px] mt-2"
+        className="mySwiper h-[280px] mt-10 px-5 md:mt-10 xl:mt-2"
       >
         <SwiperSlide><img className={styles.imagen} src="https://res-console.cloudinary.com/dhw5ulqje/media_explorer_thumbnails/4fdda515789cdba7337d2ae47000cbd7/detailed" alt="" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
         <SwiperSlide><img className={styles.imagen} src={cursos} alt="" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>

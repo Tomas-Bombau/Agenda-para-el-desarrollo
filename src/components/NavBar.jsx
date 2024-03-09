@@ -60,14 +60,14 @@ const NavBar = () => {
     <div className='flex justify-between gap-5 items-center'>
       <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 lg:hidden">
         <Button color="red" onClick={() => setHamburger(!hamburger)} variant="text" size="large" aria-label="Menu">
-          <CiMenuBurger className="stroke-inherit text-white h-10 w-10" />
+          <CiMenuBurger className="stroke-inherit text-white h-8 w-8 sm:h-10 sm:w-10" />
         </Button>
       </div>
       <div className='flex justify-end flex-row-reverse items-center gap-5 lg:flex-row'>
         <div className>
           <Link to="/"><img className="h-10 w-10 hidden sm:flex" src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" /></Link>
         </div>
-        <Typography variant='headerLogo' fontWeight={600} style={gradientStyle} sx={{fontSize: smScreenSm ? '21px' : '25px'}}>Agenda para el Desarrollo</Typography>
+        <Typography variant='headerLogo' fontWeight={600} style={gradientStyle} sx={{fontSize: smScreenSm ? '18px' : '25px'}}>Agenda para el Desarrollo</Typography>
       </div>
     </div>
     <div className={hamburger && smScreenLg ? "z-10 flex-col items-start justify-start" : "hidden lg:flex lg:flex-row"}>
