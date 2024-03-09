@@ -3,19 +3,16 @@ import {
   Button,
   Container,
   Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Stack,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
-import VerifiedIcon from "@mui/icons-material/Verified";
+
 import React from "react";
 import { useTheme } from "@emotion/react";
 import { Link } from "react-router-dom";
+import SwipperPhotosMain from "./SwiperComponent";
 
 
 const About = () => {
@@ -59,17 +56,10 @@ const About = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item md={6}>
-            <List>
-              {metas.map((meta, index) => (
-                <ListItem key={index}>
-                  <ListItemIcon>
-                    <VerifiedIcon color="green" />
-                  </ListItemIcon>
-                  <ListItemText primary={<Typography variant="body1"> {meta}</Typography>}/>
-                </ListItem>
-              ))}
-            </List>
+          <Grid item xs={12} md={6} >
+            <Typography variant="body1" fontFamily="primary" sx={{marginX:"auto"}}>Unidos por la pasión e impulsados por la acción decidimos conformar <span style={{fontSize: "25px", fontFamily:"Chilanka", color:"#3A7B50", fontWeight:700, textDecoration:"underline", textDecorationColor:"#E15244",textDecorationThickness: '2px', textUnderlineOffset: '4px',}}>Agenda para el Desarrollo </span> , una asociación civil que encarna el espíritu de transformación. Juntos, queremos forjar un camino hacia un mañana mejor, porque creemos que la verdadera esencia de cada uno se encuentra en la lucha por un mundo más justo y desarrollado.
+            </Typography>
+            <SwipperPhotosMain />
           </Grid>
         </Grid>
       </Stack>
