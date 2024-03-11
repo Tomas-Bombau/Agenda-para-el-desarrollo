@@ -1,8 +1,6 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import cursos from "../assets/DerechosHumanos.jpg"
-
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,10 +22,10 @@ export default function SwipperPhotosMain() {
         modules={[Pagination]}
         className="mySwiper h-[280px] mt-10 px-5 md:mt-10 xl:mt-2"
       >
-        <SwiperSlide><img className={styles.imagen} src="https://res-console.cloudinary.com/dhw5ulqje/media_explorer_thumbnails/4fdda515789cdba7337d2ae47000cbd7/detailed" alt="" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
-        <SwiperSlide><img className={styles.imagen} src={cursos} alt="" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
-        <SwiperSlide><img className={styles.imagen} src="https://res-console.cloudinary.com/dhw5ulqje/media_explorer_thumbnails/220e87c85c8ea839d910c9d437e6a896/detailed" alt="" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
-        <SwiperSlide><img className={styles.imagen} src="https://res-console.cloudinary.com/dhw5ulqje/media_explorer_thumbnails/b8a4b6184fdc247b78a1f05bb756b326/detailed" alt="" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
+        <SwiperSlide><img className={styles.imagen} src="https://res.cloudinary.com/dhw5ulqje/image/upload/v1709745898/Agenda/ooxgnldnfidurgwadvnb.jpg" alt="niños_sonriendo" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
+        <SwiperSlide><img className={styles.imagen} src="https://res.cloudinary.com/dhw5ulqje/image/upload/v1710167552/Agenda/twf5gg8rbpgmbvscklgx.jpg" alt="taller_ciudadania" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
+        <SwiperSlide><img className={styles.imagen} src="https://res.cloudinary.com/dhw5ulqje/image/upload/v1709745898/Agenda/t2wmwzgfouqqit73cevp.jpg" alt="niño_taller" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
+        <SwiperSlide><img className={styles.imagen} src="https://res.cloudinary.com/dhw5ulqje/image/upload/v1709745898/Agenda/ysiprobknhnibf5tsbgt.jpg" alt="festejo_25demayo" style={{borderRadius: "10px", cursor: "grab"}}/></SwiperSlide>
        
       </Swiper>
     </>

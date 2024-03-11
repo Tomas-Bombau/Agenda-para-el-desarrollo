@@ -1,6 +1,6 @@
 .card {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);  
   position: relative;
   border-radius: 10px;
@@ -16,23 +16,25 @@
 }
 
 .details > p {
-  font-size: .8em;
+  font-size: 1.1em;
   margin-top: .5em;
 }
 
 .details > label {
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 25px;
 }
 
 .details {
   color: white;
   text-align: center;
+  font-weight: 500;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   width: 100%;
-  background-color: rgb(225, 82, 68, 0.9);
+  background-color: rgba(100, 98, 98, 0.9);
   position: absolute;
   bottom: 0;
-  height: 2.6em;
+  height: 3.5em;
   transition: height .5s ease-in-out;
   padding: 0.6em;
   overflow: hidden;

@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Activities from "../components/Activities";
 import ExtraInformation from "../components/ExtraInformation";
+import Steppers from "../components/Steppers";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -12,6 +14,7 @@ const Home = () => {
       <About />
       <ExtraInformation />
       <Activities />
+      <Footer />
       {/* <Principles />
       <News /> */}
     </main>

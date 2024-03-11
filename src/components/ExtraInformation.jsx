@@ -49,9 +49,9 @@ const ExtraInformation = () => {
               ))}
             </List>
         </Stack>
-      <Results />
       </Stack>
-      <Typography variant="body1" marginTop={smScreen ? "100px" : "0px"}  textAlign={smScreen ? "center" : "left"}> Somos Agenda para el Desarrollo, una Asociación Civil comprometida con la construcción de un futuro más <span style={{fontFamily:"Chilanka", fontWeight:700, fontSize:"25px"}}> equitativo y próspero</span> </Typography>
+      <Results />
+      <Typography variant="body1" marginTop="50px"  textAlign={smScreen ? "center" : "left"}> <span style={{fontFamily:"Chilanka", fontWeight:700, fontSize:"25px"}}>Agenda para el Desarrollo</span>, una Asociación Civil comprometida con la construcción de un futuro más <span style={{fontFamily:"Chilanka", fontWeight:700, fontSize:"25px"}}> equitativo y próspero</span> </Typography>
   </Container>
   );
 };

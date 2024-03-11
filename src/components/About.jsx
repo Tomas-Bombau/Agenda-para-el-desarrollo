@@ -44,7 +44,7 @@ const About = () => {
                     Tomas Bombau, presidente Agenda para el Desarrollo
                   </Typography>
                   <Link to="nosotros">
-                  <Button variant="contained" fontWeight={500} color="red" endIcon={<ReadMoreIcon />} >
+                  <Button variant="contained" fontWeight={500} color="secondary" endIcon={<ReadMoreIcon />} >
                     Conocé a todo el equipo
                   </Button>
                   </Link>

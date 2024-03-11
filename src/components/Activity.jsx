@@ -13,27 +13,19 @@ const Activity = ({image, title, info}) => {
       borderRadius={0}
       sx={{
         position: "relative",
-        backgroundImage:
-          `url(${image})`,
+        backgroundImage: `linear-gradient(170deg, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0.4) 50%), url(${image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         boxShadow: "10px 10px 10px black",
-        "&:hover::before": {
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: "rgba(254,231,138, 0.5)", // Cambia el color y la opacidad según tu preferencia
-        
+        "&:hover": {
+          backgroundImage: `url(${image})`,
         },
       }}
     >
       <Stack flex flexDirection={mdScreen ? "col" : "row"} justifyContent={mdScreen ? "end" : "space-between"} alignItems={mdScreen ? "justify-start" : "end"} height={200} marginX={mdScreen ? 1 : 5}>
         <Typography
           marginBottom={2}
-          color={title == "CULTURA" || title == "SALUD Y DEPORTES" ? "black" : "white"}
+          color="white"
           variant="h3"
           sx={{
             fontWeight: "bold"
@@ -43,7 +35,7 @@ const Activity = ({image, title, info}) => {
         </Typography>
         <Button
           variant="contained"
-          color="red"
+          color="secondary"
           size="small"
           endIcon={<PlayCircleOutlinedIcon sx={{color: "white"}}/>}
           sx={{
