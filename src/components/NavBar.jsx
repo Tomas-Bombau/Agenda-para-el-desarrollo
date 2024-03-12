@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CiMenuBurger } from "react-icons/ci";
-import { ButtonGroup, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { ButtonGroup, Button, Typography, useMediaQuery, useTheme, AppBar } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
   
@@ -39,7 +39,6 @@ const NavBar = () => {
         }
       };
 
-
       const gradientStyle = {
         background: 'linear-gradient(90deg, rgba(254,231,138,1) 0%, rgba(255,121,97,1) 53%, rgba(58,123,80,1) 99%)',
         WebkitBackgroundClip: 'text',
@@ -66,7 +65,7 @@ const NavBar = () => {
 
 
   return (
-    <nav className={`z-10 py-5 fixed flex flex-col size-full 2xl:px-12 h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-white' : 'bg-transparent'}`}>
+    <div disableGutters className={`z-10 py-5 fixed flex flex-col size-full 2xl:px-12 h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-white shadow-md' : 'bg-transparent'} `}>
     <div className='flex justify-between gap-5 items-center'>
       <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 lg:hidden">
         <Button color="red" onClick={() => setHamburger(!hamburger)} variant="text" size="large" aria-label="Menu">
@@ -84,24 +83,24 @@ const NavBar = () => {
       <ButtonGroup  aria-label='alignment button group' className={hamburger && smScreenLg ? "absolute top-[65px] left-2 z-2 rounded z-2 mt-2 flex flex-col items-start gap-1": "flex flex-row mt-0 bg-hidden gap-4"}>
         {location.pathname == "/" ? 
         <>
-          <ButtonStyled href="#nosotros" variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled href="#nosotros" variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>Nosotros</Typography>
           </ButtonStyled>
-          <ButtonStyled href="#actividades" variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled href="#actividades" variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>¿Qué hacemos?</Typography>
-          </ButtonStyled> </>: <ButtonStyled variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
+          </ButtonStyled> </>: <ButtonStyled variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
           <Link to="/"> <Typography fontWeight={400}>Inicio</Typography></Link>
           </ButtonStyled>
           }
-          <ButtonStyled  variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled  variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
             <Link to="/voluntariado"><Typography fontWeight={400}>Voluntariado</Typography></Link>
           </ButtonStyled>
-          <ButtonStyled variant='contained' color='green' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
              <Link to="/donaciones"><Typography fontWeight={400}>Donar</Typography></Link>
           </ButtonStyled>
       </ButtonGroup>
     </div>
-  </nav>
+  </div>
   )
 }
 

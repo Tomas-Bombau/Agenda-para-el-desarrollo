@@ -15,8 +15,6 @@ const Home = () => {
       <ExtraInformation />
       <Activities />
       <Footer />
-      {/* <Principles />
-      <News /> */}
     </main>
   );
 };

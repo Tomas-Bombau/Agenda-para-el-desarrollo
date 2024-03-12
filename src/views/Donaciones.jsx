@@ -4,7 +4,7 @@ import { Container } from '@mui/material'
 
 const Donaciones = () => {
   return (
-    <Container maxWidth="2xl">
+    <Container maxWidth="2xl" disableGutters>
       <NavBar />
     </Container>
   )

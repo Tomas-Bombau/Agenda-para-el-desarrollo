@@ -1,10 +1,8 @@
 import { Container, Typography, Stack, useTheme, useMediaQuery, Divider, Box, Button, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import Results from "./Results";
-import AccordionAbout from "./AccordionAbout";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
-import SchoolIcon from '@mui/icons-material/School';
+
 
 
 const ExtraInformation = () => {

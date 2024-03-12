@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 
 const Emprendimientos = () => {
   return (
-    <Container maxWidth="2xl">
+    <Container maxWidth="2xl" disableGutters>
     <NavBar />
   </Container>
   )
