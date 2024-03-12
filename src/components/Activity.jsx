@@ -1,11 +1,16 @@
 import { Box, Button, Stack, Typography, useTheme, useMediaQuery } from "@mui/material";
 import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Activity = ({image, title, info}) => {
 
+  console.log(title)
+
   const theme = useTheme()
   const mdScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  let nav = ""
+  {title.toLowerCase() === "salud y deportes" ? (nav = "salud") : (nav = title.toLowerCase())}
 
   return (
     <Box
@@ -45,7 +50,7 @@ const Activity = ({image, title, info}) => {
             }
           }}
         >
-          <Typography fontFamily="Chilanka" fontWeight={400} color="white" mt={1}>{info} </Typography>
+          <Link to={`${nav}`}><Typography fontFamily="Chilanka" fontWeight={400} color="white" mt={1}>{info} </Typography></Link>
         </Button>
       </Stack>
     </Box>

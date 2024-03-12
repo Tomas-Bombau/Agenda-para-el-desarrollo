@@ -24,12 +24,22 @@ const NavBar = () => {
       }, []); 
 
       const location = useLocation()
+      const [scroll ,setScroll] = useState(false)
     
       const [hamburger, setHamburger] = useState(false)
       const theme = useTheme();
       const smScreenLg = useMediaQuery(theme.breakpoints.down('lg'));
       const smScreenSm = useMediaQuery(theme.breakpoints.down('sm'));
     
+      window.onscroll = function() {
+        if (document.documentElement.scrollTop > 480) {
+          setScroll(true)
+        } else {
+          setScroll(false)
+        }
+      };
+
+
       const gradientStyle = {
         background: 'linear-gradient(90deg, rgba(254,231,138,1) 0%, rgba(255,121,97,1) 53%, rgba(58,123,80,1) 99%)',
         WebkitBackgroundClip: 'text',
@@ -56,7 +66,7 @@ const NavBar = () => {
 
 
   return (
-    <nav className="z-10 bg-transparent py-5 flex flex-col size-full 2xl:px-12 h-20 lg:flex-row lg:items-center lg:justify-between ">
+    <nav className={`z-10 py-5 fixed flex flex-col size-full 2xl:px-12 h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-white' : 'bg-transparent'}`}>
     <div className='flex justify-between gap-5 items-center'>
       <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 lg:hidden">
         <Button color="red" onClick={() => setHamburger(!hamburger)} variant="text" size="large" aria-label="Menu">

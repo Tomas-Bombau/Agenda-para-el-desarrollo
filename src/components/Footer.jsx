@@ -24,7 +24,7 @@ const Footer = () => {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4}>
           <Typography variant="h5" color="#3A7B50" fontWeight={"700"} align="center" gutterBottom>
-              Contact Us
+              Contacto
             </Typography>
             <Typography variant="body2" color="text.secondary" align="center">
               Donado 1275, Ciudad Autónoma de Buenos Aires
@@ -33,7 +33,7 @@ const Footer = () => {
               Email: agendaparaeldesarrollo@gmail.com
             </Typography>
             <Typography variant="body2" color="text.secondary" align="center">
-              Phone: +5491165939393
+              Cel: +5491165939393
             </Typography>
                
           </Grid>
