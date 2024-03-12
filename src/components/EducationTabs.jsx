@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { Container, Grid, Typography, styled, Paper, Button } from "@mui/material";
 
-export default function CenteredTabs({ subject, contenido }) {
+export default function CenteredTabs({ subject }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
