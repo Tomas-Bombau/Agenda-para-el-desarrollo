@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 const Activity = ({image, title, info}) => {
 
-  console.log(title)
-
   const theme = useTheme()
   const mdScreen = useMediaQuery(theme.breakpoints.down('sm'));
   let nav = ""
@@ -40,7 +38,7 @@ const Activity = ({image, title, info}) => {
         </Typography>
         <Button
           variant="contained"
-          color="secondary"
+          color="red"
           size="small"
           endIcon={<PlayCircleOutlinedIcon sx={{color: "white"}}/>}
           sx={{

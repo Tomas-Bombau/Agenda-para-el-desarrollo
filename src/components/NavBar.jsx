@@ -50,8 +50,7 @@ const NavBar = () => {
           {...props}
           sx={{
             color: 'white',
-            paddingX: "8px",
-            paddingY: "8x",
+            paddingX: "6px",
             '&:hover': {
               textDecoration: 'underline',
               textDecorationThickness: '2px',
@@ -69,7 +68,7 @@ const NavBar = () => {
     <div className='flex justify-between gap-5 items-center'>
       <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 lg:hidden">
         <Button color="red" onClick={() => setHamburger(!hamburger)} variant="text" size="large" aria-label="Menu">
-          <CiMenuBurger className={`stroke-inherit h-8 w-8 sm:h-10 sm:w-10 ${scroll ? "text-[#9c27b0]" : "text-white"}`}  />
+          <CiMenuBurger className={`stroke-inherit h-8 w-8 sm:h-10 sm:w-10 ${scroll ? "text-[#E15244]" : "text-white"}`}  />
         </Button>
       </div>
       <div className='flex justify-end flex-row-reverse items-center gap-5 lg:flex-row'>
@@ -83,19 +82,19 @@ const NavBar = () => {
       <ButtonGroup  aria-label='alignment button group' className={hamburger && smScreenLg ? "absolute top-[65px] left-2 z-2 rounded z-2 mt-2 flex flex-col items-start gap-1": "flex flex-row mt-0 bg-hidden gap-4"}>
         {location.pathname == "/" ? 
         <>
-          <ButtonStyled href="#nosotros" variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled href="#nosotros" variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>Nosotros</Typography>
           </ButtonStyled>
-          <ButtonStyled href="#actividades" variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled href="#actividades" variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
             <Typography fontWeight={400}>¿Qué hacemos?</Typography>
-          </ButtonStyled> </>: <ButtonStyled variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
+          </ButtonStyled> </>: <ButtonStyled variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
           <Link to="/"> <Typography fontWeight={400}>Inicio</Typography></Link>
           </ButtonStyled>
           }
-          <ButtonStyled  variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled  variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
             <Link to="/voluntariado"><Typography fontWeight={400}>Voluntariado</Typography></Link>
           </ButtonStyled>
-          <ButtonStyled variant='contained' color='secondary' className={smScreenLg ? "w-44" : "w-fit"}>
+          <ButtonStyled variant='contained' color='red' className={smScreenLg ? "w-44" : "w-fit"}>
              <Link to="/donaciones"><Typography fontWeight={400}>Donar</Typography></Link>
           </ButtonStyled>
       </ButtonGroup>
