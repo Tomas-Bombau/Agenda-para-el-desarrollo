@@ -65,11 +65,11 @@ const NavBar = () => {
 
 
   return (
-    <div disableGutters className={`z-10 py-5 fixed flex flex-col size-full 2xl:px-12 h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-white shadow-md' : 'bg-transparent'} `}>
+    <div className={`z-10 py-5 fixed flex flex-col size-full 2xl:px-12 h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-white shadow-md' : 'bg-transparent'} `}>
     <div className='flex justify-between gap-5 items-center'>
       <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 lg:hidden">
         <Button color="red" onClick={() => setHamburger(!hamburger)} variant="text" size="large" aria-label="Menu">
-          <CiMenuBurger className="stroke-inherit text-white h-8 w-8 sm:h-10 sm:w-10" />
+          <CiMenuBurger className={`stroke-inherit h-8 w-8 sm:h-10 sm:w-10 ${scroll ? "text-[#9c27b0]" : "text-white"}`}  />
         </Button>
       </div>
       <div className='flex justify-end flex-row-reverse items-center gap-5 lg:flex-row'>

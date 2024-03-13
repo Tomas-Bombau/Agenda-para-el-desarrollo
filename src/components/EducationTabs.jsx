@@ -13,23 +13,22 @@ export default function CenteredTabs({ subject }) {
 
   const Image = styled("img")({
     width: 200,
-    height: "100%",
+    height: 200,
+    borderRadius: 4,
+    boxShadow: "1px 1px 5px black",
     objectFit: "cover",
     objectPosition: "center"
   });
 
   return (
     <Container maxWidth="lg" disableGutters>
-      <Box padding={2} sx={{ width: "100%", display:"flex", justifyContent:"space-between"}}>
-        <Tabs value={value} onChange={handleChange}>
+      <Box padding={2} sx={{ width: "100%"}}>
+        <Tabs  variant="fullWidth" textColor="secondary" indicatorColor="secondary" value={value} onChange={handleChange} >
           {subject.map((s, index) => {
             return <Tab key={index} label={s} />;
           })}
         </Tabs>
-        <Box sx={{display:"flex", gap:2}}>
-          <Button variant="contained" color="secondary">Sumá tu tiempo</Button>
-          <Button variant="contained" color="secondary">Colaborá con el proyecto</Button>
-        </Box>
+
       </Box>
       <Paper sx={{marginTop: 5}} >
         <Grid container >
@@ -40,13 +39,13 @@ export default function CenteredTabs({ subject }) {
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum commodi autem distinctio dolorum nemo dicta, officiis placeat aliquam aut praesentium delectus temporibus voluptatem quisConsequuntur rerum eligendi sunt udantium debitis."}
             </Typography>
             <Box sx={{display: "flex", justifyContent:"space-around", alignItems:"center"}}>
-              <Image src="https://via.placeholder.com/200"/>
+              <Image src={value == 1 ? "https://radiofonica.com/wp-content/uploads/2021/10/BARRIO-POPULAR-ROSARIO.jpg" : "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710286442/Agenda/hpseyykgkmdfzce5so2t.jpg"}/>
               <Box sx={{display: "flex", flexDirection:"column", alignItems:"end"}}>
                 <Typography variant="h6" fontWeight="bold" paddingX={2}>
                   {value == 1 ? "«Tenemos que preparar a los estudiantes para su futuro, no para nuestro pasado»." : 
                   "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum commodi autem distinctio dolorum nemo dicta, officiis placeat aliquam aut praesentium delectus temporibus voluptatem quisConsequuntur rerum eligendi sunt udantium debitis."}
                 </Typography>
-                <Typography variant="overline" paddingRight={10} paddingTop={2}>Ian Jukes</Typography>
+                <Typography variant="overline" fontWeight={800} fontFamily="Chilanka" paddingRight={10} paddingTop={2}>Ian Jukes</Typography>
               </Box>
             </Box>
             <Typography>
@@ -63,6 +62,10 @@ export default function CenteredTabs({ subject }) {
           </Grid>
         </Grid>
       </Paper>
+        <Box mt={5} sx={{width:"100%", display:"flex", justifyContent:"center", gap:5}}>
+          <Button variant="contained" color="secondary">Sumá tu tiempo</Button>
+          <Button variant="contained" color="secondary">Colaborá con el proyecto</Button>
+        </Box>
     </Container>
   );
 }
