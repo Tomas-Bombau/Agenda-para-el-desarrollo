@@ -21,13 +21,11 @@ export default function CenteredTabs({ subject }) {
     <Container maxWidth="lg" disableGutters>
       <Stack component={"section"} mt={10} gap={2} padding={2}>
         <Typography variant="h1" fontFamily="Chilanka" fontWeight={800} textAlign={"center"}> « El niño no es un vaso que hay que llenar, sino una antorcha que hay que encender » </Typography>
-        <Typography variant="body1" textAlign={"center"}> Para nosotros la educación ha cobrado un nuevo significado y por eso es que emerge la necesidad de postular nuevas visiones acerca del fenómeno educativo que trasciendan la concepción de un aula disciplinar. Como en el arte, la educación abraza la creatividad y la individualidad dentro de la infinita diversidad de expresiones.</Typography>
-        <Typography variant="h6" textAlign={"center"}>Creemos en una práctica educativa más sensible, creativa y porqué no, divertida.  </Typography>
+        <Typography variant="overline" textAlign={"center"}> Como en el arte, la educación abraza la creatividad y la individualidad dentro de la infinita diversidad de expresiones. Creemos una práctica educativa más sensible, creativa y porqué no, divertida.</Typography>
       </Stack>
-      <Tabs component={"ul"} textColor="white" indicatorColor="red" value={value} aria-label="education tabs" onChange={handleChange} sx={{backgroundColor: "#FEE78A", width:"fit-content", mt:5, borderRadius:"10px 10px 0 0"}}>
-          {subject.map((s, index) => {
-            return <Tab component={"li"} key={index} label={s.label} sx={{fontSize: mdScreen ? 14 : 18, borderRight: index == 0 ? "thick double grey" : 0}}/>;
-          })}
+      <Tabs component={"ul"} textColor="white" indicatorColor="" value={value} aria-label="education tabs" onChange={handleChange} sx={{width:"fit-content", width:"fit-content", mt:5, borderRadius:"10px 10px 0 0"}}>
+          <Tab component={"li"} key={0} label={subject[0].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black", fontWeight:900, textIndent: 2, letterSpacing: 2, borderRight: value == 0 ? "1px solid black" : "null", borderTop: value == 0 ? "1px solid black" : null, borderLeft: value == 0 ? "1px solid black" : null, boxShadow:"1px 1px 2px black",  backgroundColor: value === 0 ? "white" : "#d4d4d8" }}/>;
+          <Tab component={"li"} key={1} label={subject[1].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black", fontWeight:900, textIndent: 2, letterSpacing: 2, borderLeft: value == 1 ? "1px solid black" : "null", borderTop: value == 1 ? "1px solid black" : null, borderRight: value == 1 ? "1px solid black" : null, boxShadow:"1px 1px 2px black",  backgroundColor: value === 1 ? "white" : "#d4d4d8" }}/>;
       </Tabs>
       <Paper component={"section"} sx={{ width: "100%"}}>
         <Grid container >
@@ -64,7 +62,7 @@ export default function CenteredTabs({ subject }) {
             <img 
                 src={value === 0 ? 'https://images.unsplash.com/photo-1560785496-284e257f0bf7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' : 'https://images.unsplash.com/photo-1584697964190-7383cbee8277?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} 
                 alt="" 
-                style={{width:"100%", objectFit: "cover", objectPosition: "center", height: mdScreen ? 200 : '100%', borderRadius:5, boxShadow:"5px 5px 1px grey"}}
+                style={{width:"100%", objectFit: "cover", objectPosition: "center", height: mdScreen ? 200 : '100%', borderRadius:5, boxShadow:"5px 5px 1px #d4d4d8"}}
             />
         </Grid>
         </Grid>

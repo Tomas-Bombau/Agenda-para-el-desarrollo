@@ -3,7 +3,7 @@ import React from 'react'
 
 const Banners = ({image}) => {
   return (
-    <Container maxWidth="2xl" disableGutters sx={{height:"500px", backgroundImage: `url(${image})`, backgroundSize:"cover", backgroundPosition:"center"}}>
+    <Container maxWidth="2xl" disableGutters sx={{height:"400px", backgroundImage: `url(${image})`, backgroundSize:"cover", backgroundPosition:"center"}}>
     </Container>
   )
 }
