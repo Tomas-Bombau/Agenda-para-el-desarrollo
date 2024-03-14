@@ -7,16 +7,16 @@ import {
   Grid,
   Typography,
   Paper,
-  Button,
   useTheme,
   Stack,
   useMediaQuery,
 } from "@mui/material"
-import { Link } from "react-router-dom";
 import ContactanosTabs from "./ContactanosTabs";
 
-export default function ActivityTabs({ subject, title, backgroundTabs }) {
+export default function ActivityTabs({ subject, general }) {
   const theme = useTheme();
+  
+  const smScreen= useMediaQuery(theme.breakpoints.down("sm"));
   const mdScreen = useMediaQuery(theme.breakpoints.down("md"));
   const lgScreen = useMediaQuery(theme.breakpoints.down("lg"));
   const [value, setValue] = React.useState(0);
@@ -29,25 +29,16 @@ export default function ActivityTabs({ subject, title, backgroundTabs }) {
     <Container maxWidth="lg" disableGutters>
       <Stack component={"section"} mt={5}>
         <Typography gutterBottom variant="h3" fontFamily="Chilanka" className="text-center lg:text-left" sx={{textDecoration: "underline #3A7B50", textDecorationThickness: "4px", textUnderlineOffset: "5px",}}>
-          {title}
+          {general.title}
         </Typography>
       </Stack>
-      <Tabs component={"ul"} textColor="white" indicatorColor=""  value={value} aria-label="education tabs" onChange={handleChange} sx={{backgroundImage:`url(${backgroundTabs})`,
-          backgroundPosition: "center",  width: "fit-content",  mt: 2, borderRadius: "10px 10px 0 0", }}>
-
+      <Tabs scrollButtons="true" component={"ul"} textColor="white" indicatorColor="" value={value} aria-label="education tabs" onChange={handleChange} orientation={smScreen ? "vertical" :"horizontal"} sx={{ width: "fit-content", marginX: smScreen ? "auto" : null, mt: 2, borderRadius: "10px 10px 0 0", backgroundColor:"black"}}>
         {subject.map( (s , index) => { return (
-          <Tab component={"li"} key={index} label={s.label} sx={{fontSize: mdScreen ? 14 : 18, color: "black",fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight:"1px solid black", borderTop:"1px solid black", borderLeft: "1px solid black", boxShadow: "1px 1px 2px black", backgroundColor: value === index ? "transparent" : "#d4d4d8"}} />
-        )})}
-
-        {/* <Tab component={"li"} key={0} label={subject[0].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black",fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight: value == 0 ? "1px solid black" : "null", borderTop: value == 0 ? "1px solid black" : null,
-            borderLeft: value == 0 ? "1px solid black" : null, boxShadow: "1px 1px 2px black", backgroundColor: value === 0 ? "transparent" : "#d4d4d8"}} />
-        ;
-        <Tab component={"li"} key={1} label={subject[1].label}  sx={{fontSize: mdScreen ? 14 : 18, color: "black", fontWeight: 900, textIndent: 2, letterSpacing: 2, borderLeft: value == 1 ? "1px solid black" : "null", borderTop: value == 1 ? "1px solid black" : null,
-            borderRight: value == 1 ? "1px solid black" : null, boxShadow: "1px 1px 2px black", backgroundColor: value === 1 ? "transparent" : "#d4d4d8"}} />
-        ; */}
+          <Tab component={"li"} key={index} label={s.label} sx={{backgroundImage: value == index ? `url(${general.backgroundTabs})` : "null", backgroundPosition: "center", fontSize: mdScreen ? 14 : 18, color: "black", fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight:"1px solid black", borderTop:"1px solid black", borderLeft: "1px solid black", borderBottom: smScreen ? "1px solid black" : null,  boxShadow: "1px 1px 2px black", backgroundColor: value === index ? "transparent" : "#d4d4d8" }} />
+          )})}
       </Tabs>
-      <Paper component={"section"} sx={{ width: "100%" }}>
-        <Grid container>
+      <Paper component={"section"} sx={{ width: "100%", marginTop: smScreen ? 2 : 0 }}>
+        <Grid container >
           <Grid container direction="column" justifyContent="space-between" gap={2} item xs={12} md={8} padding={2}>
             <Typography textAlign={mdScreen ? "center" : "left"}>
               {subject[value].parragraph1}

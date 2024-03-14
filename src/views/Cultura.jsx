@@ -14,11 +14,13 @@ const Cultura = () => {
   }, []);
 
 
-  let image = "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710377808/Agenda/wl0x3qzx9unnyn0yoyyn.jpg"
-  let title = "Cultura"
-  let backgroundTabs = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh5gGMIC9zdOGet5t4fhEmkZ50Tnc6R_aWCA&usqp=CAU"
-  let cite = ""
-  let subCite = ""
+  const cultureGeneral = {
+   bannerImage: "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710377808/Agenda/Culture/wl0x3qzx9unnyn0yoyyn.jpg",
+   title : "Cultura",
+   backgroundTabs: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh5gGMIC9zdOGet5t4fhEmkZ50Tnc6R_aWCA&usqp=CAU",
+   cite: "",
+   subCite: ""
+  }
   
   // <b style={{ fontWeight: "700", fontStyle: 'italic', color:"#3A7B50", fontSize:"20px" }} </b>>
 
@@ -26,7 +28,7 @@ const Cultura = () => {
     {
       label: "Arte en Las Torres",
       image:
-        "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710370195/Agenda/eiptocfhdk1aksbml2pb.jpg",
+        "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710370195/Agenda/Culture/TallerLasTorres.jpg",
       title: "+ 50 niños y niñas",
       description: "Assiten al taller que se realiza semanalmente en el barrio. Allí pintan, dibujan, trabajan los materiales reciblados y realizan obras de arte que a fin de año se exponen",
       parragraph1: <> En el taller de arte del barrio Las Torres, Esteban Echeverría, se crea un espacio vibrante donde la creatividad florece y los lazos comunitarios se fortalecen gracias al trabajo de la Profe Julia. El arte se convierte en un vehículo para la reflexión y el diálogo sobre temas sociales cruciales: el respeto, la convivencia, la diversidad y el respeto. Los sueños por cumplir y las esperanzas se plasman en dibujos, collages, retratos, etc. </>,
@@ -38,7 +40,7 @@ const Cultura = () => {
     {
       label: "Potenciar Artistas",
       image:
-        "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710380924/Agenda/nd3u6q12apsxavsq6qei.jpg",
+        "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710380924/Agenda/Culture/nd3u6q12apsxavsq6qei.jpg",
       title: "El estudio de Panda",
       description: "Se realizaron +20 visitas al estudio para que niños y niñas conozcan el entorno de producción de sus artístas favoritos. También se realizaron acompañamientos a artistas de barrio con el fin de potenciar su talento.",
       parragraph1: <> A través de Potenciar Artistas, los participantes tienen la oportunidad única de visitar un  de grabación en Villa Ortúzar, donde son recibidos por expertos de la industria musical. Estos mentores no solo comparten valiosos consejos y conocimientos, sino que también ofrecen una plataforma para que los artistas produzcan su propia música. </>,
@@ -53,8 +55,8 @@ const Cultura = () => {
   return (
     <Container maxWidth="2xl" disableGutters>
       <NavBar />
-      <Banners image={image}/>
-      <ActivityTabs title={title}  cite={cite} backgroundTabs={backgroundTabs} subCite={subCite} subject={culture}/>
+      <Banners bannerImage={cultureGeneral.bannerImage}/>
+      <ActivityTabs general={cultureGeneral} subject={culture}/>
       <Footer />
     </Container>
   )

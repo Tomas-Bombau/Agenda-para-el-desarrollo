@@ -63,7 +63,7 @@ export default function CenteredTabs({ subject, title, cite, subCite }) {
           </Grid>
           <Grid item xs={12} md={4} p={2}>
             <img 
-                src={value === 0 ? 'https://images.unsplash.com/photo-1560785496-284e257f0bf7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' : 'https://images.unsplash.com/photo-1584697964190-7383cbee8277?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} 
+                src={value === 0 ? 'https://res.cloudinary.com/dhw5ulqje/image/upload/v1710445087/Agenda/Education/photo-1560785496-284e257f0bf7_suqtty.avif' : 'https://res.cloudinary.com/dhw5ulqje/image/upload/v1710445040/Agenda/Education/photo-1584697964190-7383cbee8277_mfjjnp.avif'} 
                 alt="" 
                 style={{width:"100%", objectFit: "cover", objectPosition: "center", height: mdScreen ? 200 : '100%', borderRadius:5, boxShadow:"5px 5px 1px #d4d4d8"}}
             />

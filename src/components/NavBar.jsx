@@ -73,7 +73,7 @@ const NavBar = () => {
       </div>
       <div className='flex justify-end flex-row-reverse items-center gap-5 lg:flex-row'>
         <div className>
-          <Link to="/"><img className="h-10 w-10 hidden sm:flex" src="https://images.vexels.com/media/users/3/142789/isolated/preview/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" /></Link>
+          <Link to="/"><img className="h-10 w-10 hidden sm:flex" src="https://res.cloudinary.com/dhw5ulqje/image/upload/v1710444895/Agenda/Logo/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo_crdbh9.webp" /></Link>
         </div>
         <Typography variant='headerLogo' fontWeight={600} style={gradientStyle} sx={{fontSize: smScreenSm ? '18px' : '25px'}}>Agenda para el Desarrollo</Typography>
       </div>
