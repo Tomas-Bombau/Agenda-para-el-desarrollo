@@ -34,7 +34,7 @@ export default function ActivityTabs({ subject, general }) {
       </Stack>
       <Tabs scrollButtons="true" component={"ul"} textColor="white" indicatorColor="" value={value} aria-label="education tabs" onChange={handleChange} orientation={smScreen ? "vertical" :"horizontal"} sx={{ width: "fit-content", marginX: smScreen ? "auto" : null, mt: 2, borderRadius: "10px 10px 0 0", backgroundColor:"black"}}>
         {subject.map( (s , index) => { return (
-          <Tab component={"li"} key={index} label={s.label} sx={{backgroundImage: value == index ? `url(${general.backgroundTabs})` : "null", backgroundPosition: "center", fontSize: mdScreen ? 14 : 18, color: "black", fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight:"1px solid black", borderTop:"1px solid black", borderLeft: "1px solid black", borderBottom: smScreen ? "1px solid black" : null,  boxShadow: "1px 1px 2px black", backgroundColor: value === index ? "transparent" : "#d4d4d8" }} />
+          <Tab component={"li"} key={index} label={s.label} sx={{backgroundImage: value == index ? `url(${general.backgroundTabs})` : null, backgroundPosition: "center", fontSize: mdScreen ? 14 : 18, color: "black", fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight:"1px solid black", borderTop:"1px solid black", borderLeft: "1px solid black", borderBottom: smScreen ? "1px solid black" : null,  boxShadow: "1px 1px 2px black", backgroundColor: value === index && !general.backgroundTabs ? "white" : "#d4d4d8" }} />
           )})}
       </Tabs>
       <Paper component={"section"} sx={{ width: "100%", marginTop: smScreen ? 2 : 0 }}>

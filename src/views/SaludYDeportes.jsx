@@ -16,7 +16,7 @@ const SaludYDeportes = () => {
       const healthGeneral = {
         bannerImage: "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710445319/Agenda/Salud%20y%20Deportes/photo-1631495634750-0f14320bc0a7_ewaevk.avif",
         title :  "Salud y Deportes",
-        backgroundTabs: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh5gGMIC9zdOGet5t4fhEmkZ50Tnc6R_aWCA&usqp=CAU",
+        backgroundTabs: "",
         cite: "",
         subCite: ""
        }
