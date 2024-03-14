@@ -34,41 +34,44 @@ export default function ActivityTabs({ subject, title, backgroundTabs }) {
       </Stack>
       <Tabs component={"ul"} textColor="white" indicatorColor=""  value={value} aria-label="education tabs" onChange={handleChange} sx={{backgroundImage:`url(${backgroundTabs})`,
           backgroundPosition: "center",  width: "fit-content",  mt: 2, borderRadius: "10px 10px 0 0", }}>
-        <Tab component={"li"} key={0} label={subject[0].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black",fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight: value == 0 ? "1px solid black" : "null", borderTop: value == 0 ? "1px solid black" : null,
+
+        {subject.map( (s , index) => { return (
+          <Tab component={"li"} key={index} label={s.label} sx={{fontSize: mdScreen ? 14 : 18, color: "black",fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight:"1px solid black", borderTop:"1px solid black", borderLeft: "1px solid black", boxShadow: "1px 1px 2px black", backgroundColor: value === index ? "transparent" : "#d4d4d8"}} />
+        )})}
+
+        {/* <Tab component={"li"} key={0} label={subject[0].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black",fontWeight: 900, textIndent: 2, letterSpacing: 2, borderRight: value == 0 ? "1px solid black" : "null", borderTop: value == 0 ? "1px solid black" : null,
             borderLeft: value == 0 ? "1px solid black" : null, boxShadow: "1px 1px 2px black", backgroundColor: value === 0 ? "transparent" : "#d4d4d8"}} />
         ;
         <Tab component={"li"} key={1} label={subject[1].label}  sx={{fontSize: mdScreen ? 14 : 18, color: "black", fontWeight: 900, textIndent: 2, letterSpacing: 2, borderLeft: value == 1 ? "1px solid black" : "null", borderTop: value == 1 ? "1px solid black" : null,
             borderRight: value == 1 ? "1px solid black" : null, boxShadow: "1px 1px 2px black", backgroundColor: value === 1 ? "transparent" : "#d4d4d8"}} />
-        ;
+        ; */}
       </Tabs>
       <Paper component={"section"} sx={{ width: "100%" }}>
         <Grid container>
           <Grid container direction="column" justifyContent="space-between" gap={2} item xs={12} md={8} padding={2}>
             <Typography textAlign={mdScreen ? "center" : "left"}>
-              {value == 1 ? subject[1].parragraph1 : subject[0].parragraph1}
+              {subject[value].parragraph1}
             </Typography>
             <Box sx={{ display: lgScreen ? "column" : "flex",ustifyContent: lgScreen ? "center" : "space-around",alignItems: "center", }}>
               <Box sx={{ display: "flex",flexDirection: "column", alignItems: lgScreen ? "center" : "end"}} >
                 <Typography variant="h6" fontWeight="bold" paddingX={6} textAlign={lgScreen ? "center" : null} mt={mdScreen ? 5 : 0} >
-                  {value == 1 ? subject[1].citeCard : subject[0].citeCard}  
+                {subject[value].citeCard}
                 </Typography>
                 <Typography variant="overline" fontWeight={800}  fontFamily="Chilanka" paddingRight={lgScreen ? 0 : 10} paddingTop={2} >
-                  {value == 1 ? subject[1].citeAuthor : subject[0].citeAuthor}
-                  {value == 1 ? subject[1].citePhoto : subject[0].citePhoto}
+                {subject[value].citeAuthor}
+                {subject[value].citePhoto}
                 </Typography>
               </Box>
             </Box>
           <Typography textAlign={mdScreen ? "center" : "left"}>
-            {value == 1 ? subject[1].parragraph2 : subject[0].parragraph2}
+            {subject[value].parragraph2}
           </Typography>
           </Grid>
           <Grid item xs={12} md={4} p={2} height={mdScreen ? 300 : null}>
             <Box sx={{ height: "100%" }}>
               <Box
                 sx={{
-                  backgroundImage: `url(${
-                    value == 0 ? subject[0].image : subject[1].image
-                  })`,
+                  backgroundImage: `url(${subject[value].image })`,
                   position: "relative",
                   backgroundPosition: "center",
                   backgroundSize: "cover",
@@ -109,10 +112,10 @@ export default function ActivityTabs({ subject, title, backgroundTabs }) {
                 >
                 <Stack flex flexDirection={"column"} alignItems={"center"} justifyContent={"space-evenly"} height={"100%"}>
                 <Typography sx={{margin: 0, fontSize: "34px", color: "#E15244", fontWeight: 700, fontFamily:"Chilanka"}}>
-                    {value == 0 ? subject[0].title : subject[1].title}
+                  {subject[value].title}
                   </Typography>
                   <Typography sx={{ margin: "10px 0 0", fontSize: "17px", fontWeight:"bold", textAlign:"center", color:"#000000", lineHeight: 1.4 }}>
-                    {value == 0 ? subject[0].description  : subject[1].description}
+                  {subject[value].description}
                   </Typography>
                 </Stack>
                 </Box>
