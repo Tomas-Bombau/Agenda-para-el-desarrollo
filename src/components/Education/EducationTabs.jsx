@@ -7,7 +7,7 @@ import StarRateIcon from '@mui/icons-material/StarRate';
 import { Link } from "react-router-dom";
 import EducationResults from "./EducationResults";
 
-export default function CenteredTabs({ subject }) {
+export default function CenteredTabs({ subject, title, cite, subCite }) {
   const theme = useTheme()
   const mdScreen = useMediaQuery(theme.breakpoints.down('md'));
   const lgScreen = useMediaQuery(theme.breakpoints.down('lg'));
@@ -19,11 +19,14 @@ export default function CenteredTabs({ subject }) {
 
   return (
     <Container maxWidth="lg" disableGutters>
-      <Stack component={"section"} mt={10} gap={2} padding={2}>
-        <Typography variant="h1" fontFamily="Chilanka" fontWeight={800} textAlign={"center"}> « El niño no es un vaso que hay que llenar, sino una antorcha que hay que encender » </Typography>
-        <Typography variant="overline" textAlign={"center"}> Como en el arte, la educación abraza la creatividad y la individualidad dentro de la infinita diversidad de expresiones. Creemos una práctica educativa más sensible, creativa y porqué no, divertida.</Typography>
+      <Stack component={"section"} mt={5} gap={2} padding={2}>
+          <Typography gutterBottom variant="h3" fontFamily="Chilanka" className="text-center lg:text-left" sx={{textDecoration: "underline #3A7B50" ,textDecorationThickness: "4px", textUnderlineOffset: "5px"}}>
+          {title}
+        </Typography>
+        <Typography variant="h1" fontFamily="Chilanka" fontWeight={800} textAlign={"center"}> {cite}</Typography>
+        <Typography variant="overline" textAlign={"center"}> {subCite} </Typography>
       </Stack>
-      <Tabs component={"ul"} textColor="white" indicatorColor="" value={value} aria-label="education tabs" onChange={handleChange} sx={{width:"fit-content", width:"fit-content", mt:5, borderRadius:"10px 10px 0 0"}}>
+      <Tabs component={"ul"} textColor="white" indicatorColor="" value={value} aria-label="education tabs" onChange={handleChange} sx={{width:"fit-content", mt:5, borderRadius:"10px 10px 0 0"}}>
           <Tab component={"li"} key={0} label={subject[0].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black", fontWeight:900, textIndent: 2, letterSpacing: 2, borderRight: value == 0 ? "1px solid black" : "null", borderTop: value == 0 ? "1px solid black" : null, borderLeft: value == 0 ? "1px solid black" : null, boxShadow:"1px 1px 2px black",  backgroundColor: value === 0 ? "white" : "#d4d4d8" }}/>;
           <Tab component={"li"} key={1} label={subject[1].label} sx={{fontSize: mdScreen ? 14 : 18, color: "black", fontWeight:900, textIndent: 2, letterSpacing: 2, borderLeft: value == 1 ? "1px solid black" : "null", borderTop: value == 1 ? "1px solid black" : null, borderRight: value == 1 ? "1px solid black" : null, boxShadow:"1px 1px 2px black",  backgroundColor: value === 1 ? "white" : "#d4d4d8" }}/>;
       </Tabs>

@@ -8,9 +8,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Donaciones from "./views/Donaciones";
 import Voluntariado from "./views/Voluntariado";
 import Educacion from "./views/Educacion";
-import Salud from "./views/Salud";
 import Emprendimientos from "./views/Emprendimientos";
 import Cultura from "./views/Cultura";
+import SaludYDeportes from "./views/SaludYDeportes";
 
 
 const theme = createTheme({
@@ -89,7 +89,7 @@ function App() {
         <Route path="/educacion" element={<Educacion />} />
         <Route path="/cultura" element={<Cultura />} />
         <Route path="/emprendedores" element={<Emprendimientos />} />
-        <Route path="/salud" element={<Salud />} />
+        <Route path="/salud" element={<SaludYDeportes />} />
       </Routes>
     </ThemeProvider>
   );
