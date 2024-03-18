@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import ActivityTabs from '../components/ActivityTabs'
 import PaletteIcon from "@mui/icons-material/Palette";
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import Introduction from '../components/Introduction'
 
 const Cultura = () => {
 
@@ -13,10 +14,17 @@ const Cultura = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const introduction = {
+    title: "Cultura",
+    image: "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710771476/Agenda/Culture/WhatsApp_Image_2022-08-23_at_12.25.07_PM_gu9bhk.jpg",
+    parragraph1: "En los barrios populares, la cultura actúa como un faro de resistencia y cohesión social, ofreciendo a los sectores vulnerables un sentido de pertenencia, oportunidades de socialización y herramientas para expandir sus horizontes.",
+    parragraph2: "Al proporcionar espacios de entretenimiento y expresión artística, fomentamos la integración comunitaria y ofrecemos nuevas vías para explorar el mundo.",
+    parragraph3: "Creemos que el arte es un motor para nuestros niños, niñas y adolescentes para pensar una agenda de desarrollo sostenible."
+  }
 
   const cultureGeneral = {
    bannerImage: "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710377808/Agenda/Culture/wl0x3qzx9unnyn0yoyyn.jpg",
-   title : "Cultura",
+   subTitle : "Actividades",
    backgroundTabs: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh5gGMIC9zdOGet5t4fhEmkZ50Tnc6R_aWCA&usqp=CAU",
    cite: "",
    subCite: ""
@@ -53,8 +61,9 @@ const Cultura = () => {
 
 
   return (
-    <Container maxWidth="2xl" disableGutters>
+    <Container maxWidth="2xl" disableGutters sx={{backgroundColor: "#fafafa"}}>
       <NavBar />
+      <Introduction introduction={introduction} />
       <Banners bannerImage={cultureGeneral.bannerImage}/>
       <ActivityTabs general={cultureGeneral} subject={culture}/>
       <Footer />

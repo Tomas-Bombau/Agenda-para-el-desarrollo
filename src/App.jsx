@@ -43,23 +43,10 @@ const theme = createTheme({
       fontSize: "25px",
     },
     fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
+      "Raleway", "sans-serif",
       "Chilanka",
       "cursive",
-      "Raleway", "sans-serif"
-    ].join(","),
-    primary: [
-      "Raleway", "sans-serif"
-    ].join(","),
+    ].join(",")
   },
   palette: {
     yellow: {

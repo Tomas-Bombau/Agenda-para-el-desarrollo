@@ -12,10 +12,11 @@ import {
   useMediaQuery,
 } from "@mui/material"
 import ContactanosTabs from "./ContactanosTabs";
+import { useLocation } from "react-router-dom";
 
 export default function ActivityTabs({ subject, general }) {
   const theme = useTheme();
-  
+  const location = useLocation()
   const smScreen= useMediaQuery(theme.breakpoints.down("sm"));
   const mdScreen = useMediaQuery(theme.breakpoints.down("md"));
   const lgScreen = useMediaQuery(theme.breakpoints.down("lg"));
@@ -28,8 +29,8 @@ export default function ActivityTabs({ subject, general }) {
   return (
     <Container maxWidth="lg" disableGutters>
       <Stack component={"section"} mt={5}>
-        <Typography gutterBottom variant="h3" fontFamily="Chilanka" className="text-center lg:text-left" sx={{textDecoration: "underline #3A7B50", textDecorationThickness: "4px", textUnderlineOffset: "5px",}}>
-          {general.title}
+        <Typography gutterBottom variant="h1" fontFamily="Raleway" className="text-center lg:text-left" sx={{textDecoration: "underline #3A7B50", textDecorationThickness: "4px", textUnderlineOffset: "5px",}}>
+          {general.subTitle}
         </Typography>
       </Stack>
       <Tabs scrollButtons="true" component={"ul"} textColor="white" indicatorColor="" value={value} aria-label="education tabs" onChange={handleChange} orientation={smScreen ? "vertical" :"horizontal"} sx={{ width: "fit-content", marginX: smScreen ? "auto" : null, mt: 2, borderRadius: "10px 10px 0 0", backgroundColor:"black"}}>
@@ -59,7 +60,8 @@ export default function ActivityTabs({ subject, general }) {
           </Typography>
           </Grid>
           <Grid item xs={12} md={4} p={2} height={mdScreen ? 300 : null}>
-            <Box sx={{ height: "100%" }}>
+            <Box sx={{height:"100%"}}>
+              {/* {location.pathname == "/salud" && value == 2 ? <video controls src="../../public/WhatsApp Video 2024-03-18 at 14.17.40_cbc82a3c.mp4" style={{height:"100%",  objectFit: "cover" }}></video> :  */}
               <Box
                 sx={{
                   backgroundImage: `url(${subject[value].image })`,
@@ -102,7 +104,7 @@ export default function ActivityTabs({ subject, general }) {
                   }}
                 >
                 <Stack flex flexDirection={"column"} alignItems={"center"} justifyContent={"space-evenly"} height={"100%"}>
-                <Typography sx={{margin: 0, fontSize: "34px", color: "#E15244", fontWeight: 700, fontFamily:"Chilanka"}}>
+                <Typography sx={{margin: 0, fontSize: "34px", color: "#E15244", fontWeight: 700, textAlign:"center"}}>
                   {subject[value].title}
                   </Typography>
                   <Typography sx={{ margin: "10px 0 0", fontSize: "17px", fontWeight:"bold", textAlign:"center", color:"#000000", lineHeight: 1.4 }}>
