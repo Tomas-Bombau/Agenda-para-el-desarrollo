@@ -16,6 +16,8 @@ const Introduction = ({introduction}) => {
 
   const Image = styled("img")({
     borderRadius: "160px 0px 160px 0px",
+    border: "4px solid white",
+    boxShadow: "10px 10px 10px grey",
     height: "500px",
     }
   )

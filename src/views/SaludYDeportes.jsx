@@ -55,7 +55,7 @@ const SaludYDeportes = () => {
           image:
             "https://res.cloudinary.com/dhw5ulqje/image/upload/v1710445298/Agenda/Salud%20y%20Deportes/photo-1544698310-74ea9d1c8258_nnigyo.avif",
           title: "La Salita",
-          description: "Proyecto futbolístico que del que participan +80 chicos del barrio Santa Catalina, Lomas de Zamora",
+          description: "Proyecto futbolístico del que participan +80 chicos del barrio Santa Catalina, Lomas de Zamora",
           parragraph1: <> Para nosotros el deporte desempeña un papel crucial en la promoción de la salud física y mental de las personas. Al participar en actividades deportivas se mejora la salud de manera integral. No obstante, nuestro foco también está puesto en su rol socializador. </>,
           citeCard: "Acá no había nada así que con mi marido decidimos armar una escuelita de fútbol para que los chicos no estuvieran más en la calle. En 3 meses eran más de 100.",
           citeAuthor: "Caty, fundadora de La Salita",
