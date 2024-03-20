@@ -64,7 +64,7 @@ const NavBar = () => {
 
 
   return (
-    <div className={`z-10 py-5 sticky top-0 left-0 flex flex-col size-full h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-white shadow-md' : 'bg-transparent'} ${location.pathname != "/" ? "bg-white" : "bg-transparent"}  2xl:px-12`}>
+    <div className={`z-10 py-5 sticky top-0 left-0 flex flex-col size-full h-20 lg:flex-row lg:items-center lg:justify-between ${scroll ? 'bg-[#fafafa] shadow-md' : 'bg-transparent'} ${location.pathname != "/" ? "bg-[#fafafa]" : "bg-transparent"}  2xl:px-12`}>
       <div className='flex justify-between gap-5 items-center'>
         <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0 lg:hidden">
           <Button color="red" onClick={() => setHamburger(!hamburger)} variant="text" size="large" aria-label="Menu">
